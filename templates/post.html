@@ -1,0 +1,16 @@
+{% extends "index.html" %} {% block content %}
+<div class="text-center">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong class="text-center">Media Fetched!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="alert alert-primary" role="alert">
+        {% for img_path in imgs %}
+            <img src="/static/{{namy}}/{{img_path}}" alt="Herb" id="plant-mascot" style="width: 100px"/>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}
